@@ -45,12 +45,12 @@ $(document).on("click","header .top .endBox i",function(){
     {
         if(n == 0) {
             $(".cssStyle")
-            .attr("href","../css_2/style.css");
+            .attr("href","./css_2/style.css");
         }
         
         if(n == 1) {
             $(".cssStyle")
-            .attr("href","../css/style.css");
+            .attr("href","./css/style.css");
         }
     }
     else
