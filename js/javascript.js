@@ -86,6 +86,7 @@ $(function(){
     $(".left").css("height",""+ (h - 105) +"px");
     $(".middle").css("height",""+ (h - 155) +"px");
     $(".middle.inner").css("height",""+ (h - 230) +"px");
+    $(".middle.chLO").css("height",""+ (h - 100) +"px"); //2023-08-01_S
     $(".innerBetBox").css("height",""+ (h - 300) +"px");
     $(".right").css("height",""+ (h - 105) +"px");
 
@@ -94,6 +95,7 @@ $(function(){
         $(".left").css("height",""+ (h - 105) +"px");
         $(".middle").css("height",""+ (h - 155) +"px");
         $(".middle.inner").css("height",""+ (h - 230) +"px");
+        $(".middle.chLO").css("height",""+ (h - 100) +"px"); //2023-08-01_S
         $(".innerBetBox").css("height",""+ (h - 300) +"px");
         $(".right").css("height",""+ (h - 105) +"px");
     })

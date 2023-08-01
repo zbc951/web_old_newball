@@ -765,33 +765,24 @@
 
                     tr {
 
-                        &:hover,&:active,&.active {
+                        // &:hover,&:active,&.active {
 
-                            td {
-                                background: $mainBG_6;
-                            }
-                        }
-
-                        &.itemName {
-
-                            th {
-                                background: $mainBG_1;
-
-                                &:first-child,
-                                &:last-child {
-                                    width: 3%;
-                                }
-
-                                &:nth-of-type(2) {
-                                    width: 10%;
-                                }
-                            }
-                        }
+                        //     td {
+                        //         background: $mainBG_6;
+                        //     }
+                        // }
 
                         &.gameName {
 
                             th {
                                 padding:  8px 20px;
+
+                                &:not(:first-child) {
+
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
                                 
                                 p {
                                     text-align: start;
@@ -799,9 +790,9 @@
                             }
                         }
 
-                        &:nth-of-type(odd) {
-                            background: $mainBG_3;
-                        }
+                        // &:nth-of-type(odd) {
+                        //     background: $mainBG_3;
+                        // }
 
                         th {
                             border-bottom: 1px solid $mainColor_1;
@@ -867,9 +858,9 @@
                                     }
                                 }
 
-                                button {
-                                    background: transparent;
-                                }
+                                // button {
+                                //     background: transparent;
+                                // }
                             }
 
                             p {

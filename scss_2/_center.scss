@@ -763,35 +763,18 @@
 
                     tr {
 
-                        &.itemName {
-
-                            th {
-                                background: $mainBG_2;
-                                border-right: 1px solid $mainBorder_1;
-
-                                &:first-child,
-                                &:last-child {
-                                    width: 3%;
-                                }
-
-                                &:last-child {
-                                    border-right: 0;
-                                }
-
-                                &:nth-of-type(2) {
-                                    width: 10%;
-                                }
-
-                                p {
-                                    color: $mainColor_2;
-                                }
-                            }
-                        }
 
                         &.gameName {
 
                             th {
                                 padding:  8px 20px;
+
+                                &:not(:first-child) {
+
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
                                 
                                 p {
                                     text-align: start;
@@ -799,9 +782,9 @@
                             }
                         }
 
-                        &:nth-of-type(odd) {
-                            background: $subBG_3;
-                        }
+                        // &:nth-of-type(odd) {
+                        //     background: $subBG_3;
+                        // }
 
                         th {
                             border-bottom: 1px solid $mainColor_1;
@@ -866,9 +849,9 @@
                                     }
                                 }
 
-                                button {
-                                    background: transparent;
-                                }
+                                // button {
+                                //     background: transparent;
+                                // }
                             }
 
                             p {

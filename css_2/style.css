@@ -2033,30 +2033,14 @@ html body .center .middle .market.type_2.soccer table tr th:nth-of-type(5) {
 html body .center .middle .market.type_3 {
   margin-top: 5px;
 }
-html body .center .middle .market.type_3 table tr.itemName th {
-  background: #3d87b3;
-  border-right: 1px solid #bbbbbb;
-}
-html body .center .middle .market.type_3 table tr.itemName th:first-child, html body .center .middle .market.type_3 table tr.itemName th:last-child {
-  width: 3%;
-}
-html body .center .middle .market.type_3 table tr.itemName th:last-child {
-  border-right: 0;
-}
-html body .center .middle .market.type_3 table tr.itemName th:nth-of-type(2) {
-  width: 10%;
-}
-html body .center .middle .market.type_3 table tr.itemName th p {
-  color: #ffffff;
-}
 html body .center .middle .market.type_3 table tr.gameName th {
   padding: 8px 20px;
 }
+html body .center .middle .market.type_3 table tr.gameName th:not(:first-child) p {
+  text-align: center;
+}
 html body .center .middle .market.type_3 table tr.gameName th p {
   text-align: start;
-}
-html body .center .middle .market.type_3 table tr:nth-of-type(odd) {
-  background: #eff6fb;
 }
 html body .center .middle .market.type_3 table tr th {
   border-bottom: 1px solid #000000;
@@ -2093,9 +2077,6 @@ html body .center .middle .market.type_3 table tr td div span {
 }
 html body .center .middle .market.type_3 table tr td div span:nth-of-type(2) {
   margin-bottom: 0;
-}
-html body .center .middle .market.type_3 table tr td div button {
-  background: transparent;
 }
 html body .center .middle .market.type_3 table tr td p {
   color: #000000;
