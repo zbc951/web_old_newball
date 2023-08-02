@@ -2037,7 +2037,10 @@ html body .center .middle .market.type_3 table {
   width: 100%;
 }
 html body .center .middle .market.type_3 table tr.gameName th {
-  padding: 8px 20px;
+  padding: 8px;
+}
+html body .center .middle .market.type_3 table tr.gameName th:not(:first-child) {
+  min-width: 35px;
 }
 html body .center .middle .market.type_3 table tr.gameName th:not(:first-child) p {
   text-align: center;

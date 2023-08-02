@@ -204,7 +204,7 @@ html body::-webkit-scrollbar-track {
 }
 html body header {
   width: 100%;
-  min-width: 1100px;
+  min-width: 1235px;
   height: auto;
 }
 html body header .top {
@@ -1980,7 +1980,10 @@ html body .center .middle .market.type_3 table {
   width: 100%;
 }
 html body .center .middle .market.type_3 table tr.gameName th {
-  padding: 8px 20px;
+  padding: 8px;
+}
+html body .center .middle .market.type_3 table tr.gameName th:not(:first-child) {
+  min-width: 35px;
 }
 html body .center .middle .market.type_3 table tr.gameName th:not(:first-child) p {
   text-align: center;

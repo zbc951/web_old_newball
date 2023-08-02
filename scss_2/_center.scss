@@ -767,9 +767,10 @@
                         &.gameName {
 
                             th {
-                                padding:  8px 20px;
+                                padding:  8px;
 
                                 &:not(:first-child) {
+                                    min-width: 35px;
 
                                     p {
                                         text-align: center;
