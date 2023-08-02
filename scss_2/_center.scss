@@ -760,9 +760,9 @@
                 margin-top: 5px;
 
                 table {
+                    width: 100%;
 
                     tr {
-
 
                         &.gameName {
 
@@ -791,22 +791,26 @@
                         }
 
                         td {
+                            min-width: 0;
 
                             &:first-child,
                             &:last-child {
-                                width: 3%;
+                                width: 1%;
+                                min-width: 60px;
 
                                 div {
                                     
                                     span {
                                         font-size: 14px;
                                         color: $mainColor_1;
+                                        @include textHidden;
                                     }
                                 }
                             }
 
                             &:nth-of-type(2) {
                                 width: 10%;
+                                min-width: 120px;
 
                                 div {
                                     align-items: unset;
@@ -833,7 +837,7 @@
                             &:nth-of-type(15),
                             &:nth-of-type(16),
                             &:nth-of-type(17){
-                                width: 3%;
+                                width: 2%;
                             }
 
                             div {
@@ -843,6 +847,7 @@
                                     font-size: 14px;
                                     color: $mainColor_1;
                                     margin-bottom: 5px;
+                                    @include textHidden;
 
                                     &:nth-of-type(2) {
                                         margin-bottom: 0;
@@ -857,6 +862,7 @@
                             p {
                                 color: $mainColor_1;
                                 text-align: center;
+                                @include textHidden;
                             }
                         }
 

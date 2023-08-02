@@ -2033,6 +2033,9 @@ html body .center .middle .market.type_2.soccer table tr th:nth-of-type(5) {
 html body .center .middle .market.type_3 {
   margin-top: 5px;
 }
+html body .center .middle .market.type_3 table {
+  width: 100%;
+}
 html body .center .middle .market.type_3 table tr.gameName th {
   padding: 8px 20px;
 }
@@ -2045,15 +2048,23 @@ html body .center .middle .market.type_3 table tr.gameName th p {
 html body .center .middle .market.type_3 table tr th {
   border-bottom: 1px solid #000000;
 }
+html body .center .middle .market.type_3 table tr td {
+  min-width: 0;
+}
 html body .center .middle .market.type_3 table tr td:first-child, html body .center .middle .market.type_3 table tr td:last-child {
-  width: 3%;
+  width: 1%;
+  min-width: 60px;
 }
 html body .center .middle .market.type_3 table tr td:first-child div span, html body .center .middle .market.type_3 table tr td:last-child div span {
   font-size: 14px;
   color: #000000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 html body .center .middle .market.type_3 table tr td:nth-of-type(2) {
   width: 10%;
+  min-width: 120px;
 }
 html body .center .middle .market.type_3 table tr td:nth-of-type(2) div {
   -webkit-box-align: unset;
@@ -2065,7 +2076,7 @@ html body .center .middle .market.type_3 table tr td:nth-of-type(2) div span {
   font-weight: bold;
 }
 html body .center .middle .market.type_3 table tr td:nth-of-type(3), html body .center .middle .market.type_3 table tr td:nth-of-type(4), html body .center .middle .market.type_3 table tr td:nth-of-type(5), html body .center .middle .market.type_3 table tr td:nth-of-type(6), html body .center .middle .market.type_3 table tr td:nth-of-type(7), html body .center .middle .market.type_3 table tr td:nth-of-type(8), html body .center .middle .market.type_3 table tr td:nth-of-type(9), html body .center .middle .market.type_3 table tr td:nth-of-type(10), html body .center .middle .market.type_3 table tr td:nth-of-type(11), html body .center .middle .market.type_3 table tr td:nth-of-type(12), html body .center .middle .market.type_3 table tr td:nth-of-type(13), html body .center .middle .market.type_3 table tr td:nth-of-type(14), html body .center .middle .market.type_3 table tr td:nth-of-type(15), html body .center .middle .market.type_3 table tr td:nth-of-type(16), html body .center .middle .market.type_3 table tr td:nth-of-type(17) {
-  width: 3%;
+  width: 2%;
 }
 html body .center .middle .market.type_3 table tr td div {
   height: 55px;
@@ -2074,6 +2085,9 @@ html body .center .middle .market.type_3 table tr td div span {
   font-size: 14px;
   color: #000000;
   margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 html body .center .middle .market.type_3 table tr td div span:nth-of-type(2) {
   margin-bottom: 0;
@@ -2081,6 +2095,9 @@ html body .center .middle .market.type_3 table tr td div span:nth-of-type(2) {
 html body .center .middle .market.type_3 table tr td p {
   color: #000000;
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 html body .center .middle .market.type_3 table tr:last-child td {
   border-bottom: 0;
