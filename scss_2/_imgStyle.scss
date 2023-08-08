@@ -74,6 +74,16 @@ header .logo {
     background-size: cover;
 }
 
+//live
+.topfix .functionWrap i {
+    background: url('../images/liveFountion_ic.png') no-repeat center;
+    background-size: 200%;
+}
+.animateShow .functionBar li i {
+    background: url('../images/functionBar_ic.png') no-repeat center;
+    background-size: 600%;
+}
+
     //共用
     .cube::before {
         background: url('../images/cube/cubeArrow_1.png') no-repeat center;

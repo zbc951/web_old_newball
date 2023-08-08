@@ -172,6 +172,16 @@ header .logo {
   background-size: cover;
 }
 
+.topfix .functionWrap i {
+  background: url("../images/liveFountion_ic.png") no-repeat center;
+  background-size: 200%;
+}
+
+.animateShow .functionBar li i {
+  background: url("../images/functionBar_ic.png") no-repeat center;
+  background-size: 600%;
+}
+
 .cube::before {
   background: url("../images/cube/cubeArrow_1.png") no-repeat center;
   background-size: contain;
@@ -1670,6 +1680,83 @@ html body .center .topfix ul .live {
 html body .center .topfix ul .live p {
   color: #ffffff;
 }
+html body .center .topfix ul .functionWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+html body .center .topfix ul .functionWrap i {
+  width: 30px;
+  height: 30px;
+  background-position-y: 0%;
+  cursor: pointer;
+  position: relative;
+}
+html body .center .topfix ul .functionWrap i::before {
+  display: none;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3.5px 7px 3.5px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+html body .center .topfix ul .functionWrap i::after {
+  display: none;
+  content: "";
+  width: auto;
+  height: 15px;
+  background: #ffffff;
+  color: #3d87b3;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 2px 6px 1px;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+html body .center .topfix ul .functionWrap i.live_icon {
+  background-position-x: 0%;
+  margin-right: 15px;
+}
+html body .center .topfix ul .functionWrap i.live_icon::after {
+  content: "直播";
+}
+html body .center .topfix ul .functionWrap i.live_icon:hover, html body .center .topfix ul .functionWrap i.live_icon:active, html body .center .topfix ul .functionWrap i.live_icon.active {
+  background-position-y: 50%;
+}
+html body .center .topfix ul .functionWrap i.live_icon:hover::before, html body .center .topfix ul .functionWrap i.live_icon:hover::after {
+  display: block;
+  opacity: 0.9;
+}
+html body .center .topfix ul .functionWrap i.animate_icon {
+  background-position-x: 100%;
+}
+html body .center .topfix ul .functionWrap i.animate_icon::after {
+  content: "動畫";
+}
+html body .center .topfix ul .functionWrap i.animate_icon:hover, html body .center .topfix ul .functionWrap i.animate_icon:active, html body .center .topfix ul .functionWrap i.animate_icon.active {
+  background-position-y: 100%;
+}
+html body .center .topfix ul .functionWrap i.animate_icon:hover::before, html body .center .topfix ul .functionWrap i.animate_icon:hover::after {
+  display: block;
+  opacity: 0.9;
+}
 html body .center .chleague {
   width: 100%;
   height: auto;
@@ -2855,6 +2942,104 @@ html body .center .middle .liveStream video {
 }
 html body .center .middle .liveStream video:hover, html body .center .middle .liveStream video:active {
   border-color: #ffffff;
+}
+html body .center .middle .liveStream .animateShow {
+  width: 100%;
+  height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  margin-bottom: 10px;
+  background: #000000;
+  position: relative;
+  z-index: 1;
+}
+html body .center .middle .liveStream .animateShow .functionBar {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #393939;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+html body .center .middle .liveStream .animateShow .functionBar li {
+  width: 125px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+html body .center .middle .liveStream .animateShow .functionBar li::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+html body .center .middle .liveStream .animateShow .functionBar li:hover, html body .center .middle .liveStream .animateShow .functionBar li:active, html body .center .middle .liveStream .animateShow .functionBar li.active {
+  background: transparent;
+  border: none;
+}
+html body .center .middle .liveStream .animateShow .functionBar li:hover::before, html body .center .middle .liveStream .animateShow .functionBar li:active::before, html body .center .middle .liveStream .animateShow .functionBar li.active::before {
+  opacity: 1;
+}
+html body .center .middle .liveStream .animateShow .functionBar li:hover i, html body .center .middle .liveStream .animateShow .functionBar li:active i, html body .center .middle .liveStream .animateShow .functionBar li.active i {
+  -webkit-filter: brightness(3);
+          filter: brightness(3);
+}
+html body .center .middle .liveStream .animateShow .functionBar li i {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 3px;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.sport {
+  background-position-x: 0%;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.report {
+  background-position-x: 20%;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.vs {
+  background-position-x: 40%;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.rank {
+  background-position-x: 60%;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.sound {
+  background-position-x: 80%;
+}
+html body .center .middle .liveStream .animateShow .functionBar li i.team {
+  background-position-x: 100%;
 }
 html body .center .middle .liveStream table {
   width: 100%;
