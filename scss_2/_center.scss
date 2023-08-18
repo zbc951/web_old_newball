@@ -1226,6 +1226,14 @@
                             }
                         }
                     }
+
+                    &:nth-child(odd) {
+                        background: $mainBG_4;
+                        
+                        button {
+                            background: $mainBG_4; 
+                        }
+                    }
                 }
             }
 
