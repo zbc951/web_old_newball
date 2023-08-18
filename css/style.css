@@ -2313,7 +2313,7 @@ html body .center .middle .market table tr td div button i {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #5b6068;
+  color: #68707e;
   font-size: 12px;
 }
 html body .center .middle .market table tr td div .love {
@@ -2333,7 +2333,7 @@ html body .center .middle .market table tr:nth-child(odd) {
   background: #151b24;
 }
 html body .center .middle .market table tr:nth-child(odd) button {
-  background: #283344;
+  background: #212b3a;
 }
 html body .center .middle .market ul {
   width: 100%;
@@ -3131,7 +3131,7 @@ html body .center .middle .liveStream table tr td div button i {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #5b6068;
+  color: #68707e;
   font-size: 12px;
 }
 html body .center .middle .liveStream ul {

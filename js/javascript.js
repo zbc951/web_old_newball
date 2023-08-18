@@ -8,331 +8,316 @@ function currentTime() {
     m = now.getMinutes();
     s = now.getSeconds();
     var curTime = document.getElementsByClassName('time');
-    curTime[0].innerHTML = yy+'/'+mm+'/'+dd+'&emsp;'+h+' : '+m+' : '+s;
-    setTimeout('currentTime()',1000);
+    curTime[0].innerHTML = yy + '/' + mm + '/' + dd + '&emsp;' + h + ' : ' + m + ' : ' + s;
+    setTimeout('currentTime()', 1000);
 
-    if(h < 10)
-    {
-        curTime[0].innerHTML = yy+'/'+mm+'/'+dd+'&emsp;0'+h+' : '+m+' : '+s;
+    if (h < 10) {
+        curTime[0].innerHTML = yy + '/' + mm + '/' + dd + '&emsp;0' + h + ' : ' + m + ' : ' + s;
     }
-    if(m < 10)
-    {
-        curTime[0].innerHTML = yy+'/'+mm+'/'+dd+'&emsp;'+h+' : 0'+m+' : '+s;
+    if (m < 10) {
+        curTime[0].innerHTML = yy + '/' + mm + '/' + dd + '&emsp;' + h + ' : 0' + m + ' : ' + s;
     }
-    if(s < 10)
-    {
-        curTime[0].innerHTML = yy+'/'+mm+'/'+dd+'&emsp;'+h+' : '+m+' : 0'+s;
+    if (s < 10) {
+        curTime[0].innerHTML = yy + '/' + mm + '/' + dd + '&emsp;' + h + ' : ' + m + ' : 0' + s;
     }
 }
 
 //cube
-$(function(){
-    $(".cube").on("click",function(){
+$(function () {
+    $(".cube").on("click", function () {
         $(this)
-        .toggleClass("active");
+            .toggleClass("active");
     })
 })
 
 //切換模式
-$(document).on("click","header .top .endBox i",function(){
+$(document).on("click", "header .top .endBox i", function () {
     var n = $(this).index();
 
     $(this)
-    .addClass("active")
-    .siblings().removeClass("active");
+        .addClass("active")
+        .siblings().removeClass("active");
 
-    if($(".cssStyle").hasClass("index"))
-    {
-        if(n == 0) {
+    if ($(".cssStyle").hasClass("index")) {
+        if (n == 0) {
             $(".cssStyle")
-            .attr("href","./css_2/style.css");
+                .attr("href", "./css_2/style.css");
         }
-        
-        if(n == 1) {
+
+        if (n == 1) {
             $(".cssStyle")
-            .attr("href","./css/style.css");
+                .attr("href", "./css/style.css");
         }
     }
-    else
-    {
-        if(n == 0) {
+    else {
+        if (n == 0) {
             $(".cssStyle")
-            .attr("href","../css_2/style.css");
+                .attr("href", "../css_2/style.css");
         }
-        
-        if(n == 1) {
+
+        if (n == 1) {
             $(".cssStyle")
-            .attr("href","../css/style.css");
+                .attr("href", "../css/style.css");
         }
     }
 })
 
 //chleague
-$(function(){
-    $(".topfix .chooseLeague").on("click",function(){
+$(function () {
+    $(".topfix .chooseLeague").on("click", function () {
         $(".chleague")
-        .toggleClass("display");
+            .toggleClass("display");
     })
 
-    $(".chleague button").on("click",function(){
+    $(".chleague button").on("click", function () {
         $(".chleague")
-        .removeClass("display");
+            .removeClass("display");
     })
 })
 
 //自動高度
-$(function(){
+$(function () {
     var h = $(window).innerHeight();
-    $(".left").css("height",""+ (h - 105) +"px");
-    $(".middle").css("height",""+ (h - 155) +"px");
-    $(".middle.inner").css("height",""+ (h - 230) +"px");
-    $(".middle.chLO").css("height",""+ (h - 100) +"px"); //2023-08-01_S
-    $(".innerBetBox").css("height",""+ (h - 300) +"px");
-    $(".right").css("height",""+ (h - 105) +"px");
+    $(".left").css("height", "" + (h - 105) + "px");
+    $(".middle").css("height", "" + (h - 155) + "px");
+    $(".middle.inner").css("height", "" + (h - 230) + "px");
+    $(".middle.chLO").css("height", "" + (h - 100) + "px"); //2023-08-01_S
+    $(".innerBetBox").css("height", "" + (h - 300) + "px");
+    $(".right").css("height", "" + (h - 105) + "px");
 
-    $(window).resize(function(){
+    $(window).resize(function () {
         var h = $(window).innerHeight();
-        $(".left").css("height",""+ (h - 105) +"px");
-        $(".middle").css("height",""+ (h - 155) +"px");
-        $(".middle.inner").css("height",""+ (h - 230) +"px");
-        $(".middle.chLO").css("height",""+ (h - 100) +"px"); //2023-08-01_S
-        $(".innerBetBox").css("height",""+ (h - 300) +"px");
-        $(".right").css("height",""+ (h - 105) +"px");
+        $(".left").css("height", "" + (h - 105) + "px");
+        $(".middle").css("height", "" + (h - 155) + "px");
+        $(".middle.inner").css("height", "" + (h - 230) + "px");
+        $(".middle.chLO").css("height", "" + (h - 100) + "px"); //2023-08-01_S
+        $(".innerBetBox").css("height", "" + (h - 300) + "px");
+        $(".right").css("height", "" + (h - 105) + "px");
     })
 })
 
 //leftNAV
-$(function(){
-    $(".left li").on("click",function(){
+$(function () {
+    $(".left li").on("click", function () {
         $(this)
-        .addClass("active")
-        .siblings().removeClass("active");
+            .addClass("active")
+            .siblings().removeClass("active");
 
         $(".mainArea .center")
-        .addClass("display")
-        .siblings().removeClass("display");
+            .addClass("display")
+            .siblings().removeClass("display");
     })
 
-    $(".left li").on("click",function(){
+    $(".left li").on("click", function () {
         var n = $(this).index();
 
-        $(".center .mainBox:eq("+ n +"),.center .market:eq("+ n +"),.center .score:eq("+ n +"),.center .result:eq("+ n +")")
-        .addClass("display")
-        .siblings().removeClass("display");
+        $(".center .mainBox:eq(" + n + "),.center .market:eq(" + n + "),.center .score:eq(" + n + "),.center .result:eq(" + n + ")")
+            .addClass("display")
+            .siblings().removeClass("display");
     })
 
-    $(".left .smallList").on("click",function(){
+    $(".left .smallList").on("click", function () {
         $(this)
-        .addClass("active")
-        .siblings().removeClass("active");
+            .addClass("active")
+            .siblings().removeClass("active");
     })
 })
 
 //innerBtn
-$(function(){
-    $(".market .innerBtn").on("click",function(){
-        
-        if($(this).closest(".market").hasClass("soccer"))
-        {
+$(function () {
+    $(".market .innerBtn").on("click", function () {
+
+        if ($(this).closest(".market").hasClass("soccer")) {
             $(".innerPage,.innerBox.soccer")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
-        else if($(this).closest(".market").hasClass("basketball USA"))
-        {
+        else if ($(this).closest(".market").hasClass("basketball USA")) {
             $(".innerPage,.innerBox.basketball.USA")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
-        else if($(this).closest(".market").hasClass("basketball else"))
-        {
+        else if ($(this).closest(".market").hasClass("basketball else")) {
             $(".innerPage,.innerBox.basketball.else")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
     })
 
-    $(".innerBox .topfix button").on("click",function(){
+    $(".innerBox .topfix button").on("click", function () {
 
-        if($(this).closest(".innerBox").hasClass("soccer"))
-        {
+        if ($(this).closest(".innerBox").hasClass("soccer")) {
             $(".center,.market.soccer.type_1")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
-        else if($(this).closest(".innerBox").hasClass("basketball USA"))
-        {
+        else if ($(this).closest(".innerBox").hasClass("basketball USA")) {
             $(".center,.market.basketball.USA.type_1")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
-        else if($(this).closest(".innerBox").hasClass("basketball else"))
-        {
+        else if ($(this).closest(".innerBox").hasClass("basketball else")) {
             $(".center,.market.basketball.else.type_1")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
     })
 })
 
 //right
-$(function(){
+$(function () {
     //即時資訊單數
     var count = $(".right .statusWindow .ST_Window li").length;
     $(".right .statusWindow .stNumber").text(count);
 
     //移除注單
-    $(".right .statusWindow .ST_Window li .betAmount i").click(function(){
+    $(".right .statusWindow .ST_Window li .betAmount i").click(function () {
         $(this)
-        .closest("li")
-        .remove();
+            .closest("li")
+            .remove();
 
         var count = $(".right .statusWindow .ST_Window li").length;
         $(".right .statusWindow .stNumber").text(count);
     })
 
     //room livelist展開切換
-    $(".right .room .twobut button").click(function(){
+    $(".right .room .twobut button").click(function () {
         var btn = $(this).index();
 
         $(this)
-        .addClass("active")
-        .siblings().removeClass("active");
+            .addClass("active")
+            .siblings().removeClass("active");
 
-        if(btn == 0) {
+        if (btn == 0) {
             $(".right .room .liveListBox")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
-        if(btn == 1) {
+        if (btn == 1) {
             $(".right .room .bettingStatus")
-            .addClass("display")
-            .siblings().removeClass("display");
+                .addClass("display")
+                .siblings().removeClass("display");
         }
     })
 
     //room livelist點擊選擇播放影片
-    $(".right .room .livelist .innerList").click(function(){
+    $(".right .room .livelist .innerList").click(function () {
         var leftTeam = $(this).find(".teamA").text();
         var rightTeam = $(this).find(".teamB").text();
 
-        if ($(this).find("button").prop("disabled"))
-        {
+        if ($(this).find("button").prop("disabled")) {
             alert("視頻尚未準備完成，請稍後在試");
-        } 
+        }
         else {
             $(".right .liveWindow .teamWindow .leftTeam").text(leftTeam);
             $(".right .liveWindow .teamWindow .rightTeam").text(rightTeam);
-           
+
             $(".right .liveWindow .teamWindow")
-            .addClass("display");
-    
+                .addClass("display");
+
             $(this)
-            .addClass("active");
+                .addClass("active");
         }
     })
 
     //room livelist展開切換
-    $(".right .room .livelist .liveTitle").click(function(){
+    $(".right .room .livelist .liveTitle").click(function () {
         $(this).parent()
-        .toggleClass("display")
-        .siblings().removeClass("display");
+            .toggleClass("display")
+            .siblings().removeClass("display");
     })
 })
 
 //teach 盤口教程
-$(function(){
-    $(".teach .topfix ul li").click(function(){
+$(function () {
+    $(".teach .topfix ul li").click(function () {
         var count = $(this).index();
-       
-        $(this)
-        .addClass("active")
-        .siblings().removeClass("active");
 
-        $(".teach .teachContent:eq("+ count +")")
-        .addClass("display")
-        .siblings().removeClass("display");
+        $(this)
+            .addClass("active")
+            .siblings().removeClass("active");
+
+        $(".teach .teachContent:eq(" + count + ")")
+            .addClass("display")
+            .siblings().removeClass("display");
 
         //針對比分字長調整font-size
-        $(".teach .midBox .score").each(function(){
-            
-            if($(this).text().length >= 6)
-            {
+        $(".teach .midBox .score").each(function () {
+
+            if ($(this).text().length >= 6) {
                 $(this)
-                .css("font-size","16px");
+                    .css("font-size", "16px");
             }
-            else if($(this).text().length >= 5)
-            {
+            else if ($(this).text().length >= 5) {
                 $(this)
-                .css("font-size","18px");
+                    .css("font-size", "18px");
             }
         })
     })
 })
 
 //instantBet
-$(function(){
-    $(".instantBet table").click(function(){
+$(function () {
+    $(".instantBet table").click(function () {
         $(this)
-        .toggleClass("active");
+            .toggleClass("active");
     })
 })
 
 //contact
-$(function(){
-    $(".topfix.contact .fixbar li").on("click",function(){
+$(function () {
+    $(".topfix.contact .fixbar li").on("click", function () {
         $(this)
-        .addClass("active")
-        .siblings().removeClass("active");
+            .addClass("active")
+            .siblings().removeClass("active");
 
         var n = $(this).index();
 
-        $(".middle.inner .contact:eq("+ n +")")
-        .addClass("display")
-        .siblings().removeClass("display");
+        $(".middle.inner .contact:eq(" + n + ")")
+            .addClass("display")
+            .siblings().removeClass("display");
     })
 })
 
 //message
-$(function(){
-    $(".message .questionBox .title").on("click",function(){
+$(function () {
+    $(".message .questionBox .title").on("click", function () {
         $(this)
-        .addClass("active")
-        .next().addClass("active");
+            .addClass("active")
+            .next().addClass("active");
 
         $(this).closest(".questionBox")
-        .siblings().find(".title,.textBox")
-        .removeClass("active");
+            .siblings().find(".title,.textBox")
+            .removeClass("active");
     })
 })
 
 //betRecord
-$(function(){
-    $(".betRecord .detaBox .firstLine").click(function(){
+$(function () {
+    $(".betRecord .detaBox .firstLine").click(function () {
 
-        if($(this).next().hasClass("recordbox"))
-        {
+        if ($(this).next().hasClass("recordbox")) {
             $(this).parent()
-            .toggleClass("active");
+                .toggleClass("active");
         }
 
         $(this).parent()
-        .siblings().removeClass("active");
+            .siblings().removeClass("active");
     })
-    $(".betRecord .recordbox table").click(function(){
+    $(".betRecord .recordbox table").click(function () {
         $(this)
-        .toggleClass("active");
+            .toggleClass("active");
     })
 })
 
 //row
-$(function(){
-    $(".row").on("click",function(){
+$(function () {
+    $(".row").on("click", function () {
         $(this)
-        .toggleClass("turn");
+            .toggleClass("turn");
     })
 
-    $(".controlWindow .row").on("click",function(){
+    $(".controlWindow .row").on("click", function () {
         var n = $(".left li.active").index();
 
         console.log(n);
@@ -340,176 +325,176 @@ $(function(){
 })
 
 //jumpWindow
-$(function(){
-    $(".jumpWindow .close").on("click",function(){
+$(function () {
+    $(".jumpWindow .close").on("click", function () {
         $(".filter")
-        .removeClass("display");
+            .removeClass("display");
     })
 
-    $(".conversionBtn").on("click",function(){
+    $(".conversionBtn").on("click", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.conversionWindow")
-        .addClass("display");
+            .addClass("display");
     })
 
-    $(".controlBtn").on("click",function(){
+    $(".controlBtn").on("click", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.controlWindow")
-        .addClass("display");
+            .addClass("display");
     })
 
-    $(document).on("click",".market table button:not(.mixStyle)",function(){
+    $(document).on("click", ".market table button:not(.mixStyle)", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.betWindow")
-        .addClass("display");
+            .addClass("display");
     })
 
-    $(".betWindow .betBox button:last-child").on("click",function(){
+    $(".betWindow .betBox button:last-child").on("click", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.checkWindow")
-        .addClass("display");
+            .addClass("display");
     })
 
-    $(".changePwBtn").on("click",function(){
+    $(".changePwBtn").on("click", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.changePwWindow")
-        .addClass("display");
+            .addClass("display");
     })
 
-    $(".mixpass .betBtn").on("click",function(){
+    $(".mixpass .betBtn").on("click", function () {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.checkMixWindow")
-        .addClass("display");
+            .addClass("display");
     })
 })
 
 //mixpass
-$(function(){
-    $(".innerSide .left ul li .smallList").click(function(event){
+$(function () {
+    $(".innerSide .left ul li .smallList").click(function (event) {
         var mix = "混合過關";
 
-        if($(this).find("p").text() == mix) 
-        {
+        if ($(this).find("p").text() == mix) {
             $(".center .mixpass")
-            .addClass("display");
+                .addClass("display");
 
             $(".market table button")
-            .addClass("mixStyle");
+                .addClass("mixStyle");
         }
-        else
-        {
+        else {
             $(".center .mixpass")
-            .removeClass("display");
+                .removeClass("display");
 
             $(".market table button")
-            .removeClass("mixStyle active");
+                .removeClass("mixStyle active");
         }
 
         event.stopPropagation();
     })
 
-    $(".innerSide .left ul li").click(function(){
-    
+    $(".innerSide .left ul li").click(function () {
+
         $(".mixpass")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".market table button")
-        .removeClass("mixStyle active");
+            .removeClass("mixStyle active");
 
         $(this).find(".smallList:eq(0)")
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
     })
 
-    $('.mixpass .title').click(function(){
+    $('.mixpass .title').click(function () {
         $(this).parent()
-        .toggleClass("active");
+            .toggleClass("active");
 
-        if($(".mixpass .countingBox").find("table").length > 1 )
-        {
+        if ($(".mixpass .countingBox").find("table").length > 1) {
             $(".mixpass .content")
-            .css("height","464px");
+                .css("height", "464px");
 
         } else {
             $(".mixpass .content")
-            .css("height","335px");
+                .css("height", "335px");
         }
 
-        if($(".mixpass .content").height() > 1)
-        {
+        if ($(".mixpass .content").height() > 1) {
             $(".mixpass .content")
-            .css("height","0px");
+                .css("height", "0px");
         }
     })
 
-    $(".calbtn").on("click",function(event){
+    $(".calbtn").on("click", function (event) {
         $(".jumpWindow")
-        .removeClass("display");
+            .removeClass("display");
 
         $(".filter,.calcWindow")
-        .addClass("display");
+            .addClass("display");
 
         event.stopPropagation();
     })
 
-    $(document).on("click",".mixStyle",function(){
+    $(document).on("click", ".mixStyle", function () {
         $(this)
-        .toggleClass("active")
-        .siblings().removeClass("active");
+            .toggleClass("active")
+            .siblings().removeClass("active");
 
         $(this).closest("td")
-        .siblings().find("button")
-        .removeClass("active");
+            .siblings().find("button")
+            .removeClass("active");
     })
 
     var f = 0;
-    $(".mixpass .calculate button").on("click",function(){
+    $(".mixpass .calculate button").on("click", function () {
         var n = parseInt($(this).val());
 
         f = f + n;
 
         $(".mixpass .calculate label:first-child input")
-        .attr("value",""+ f +"");
+            .attr("value", "" + f + "");
 
-        if($(this).hasClass("clear") || $(this).hasClass("betBtn"))
-        {
+        if ($(this).hasClass("clear") || $(this).hasClass("betBtn")) {
             $(".mixpass .calculate label:first-child input")
-            .attr("value","");
+                .attr("value", "");
         }
 
-        if($(".mixpass .calculate label:first-child input").val() != "")
-        {
-            $(".mixpass .betBtn").prop("disabled",false);
+        if ($(".mixpass .calculate label:first-child input").val() != "") {
+            $(".mixpass .betBtn").prop("disabled", false);
         }
-        else
-        {
-            $(".mixpass .betBtn").prop("disabled",true);
+        else {
+            $(".mixpass .betBtn").prop("disabled", true);
         }
     })
 })
 
 //onTime
-$(function(){
-    $(".center .market.onTime table tr:first-child").on("click",function(){
+$(function () {
+    $(".center .market.onTime table tr:first-child").on("click", function () {
         $(this).closest("table")
-        .toggleClass("active");
+            .toggleClass("active");
     })
 
-    $(".center .market.onTime .title").on("click",function(){
+    $(".center .market.onTime .title").on("click", function () {
         $(this).closest("ol")
-        .toggleClass("active");
+            .toggleClass("active");
     })
 })
+
+// love active  20230818 j add
+$(function () {
+    $(" .center .middle table tr td div .love").click(function () {
+        $(this).toggleClass("active");
+    })
+});

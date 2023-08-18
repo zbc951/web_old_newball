@@ -2219,9 +2219,13 @@ html body .center .middle .market table tr:hover td, html body .center .middle .
 }
 html body .center .middle .market table tr:hover td.disable div button, html body .center .middle .market table tr:active td.disable div button, html body .center .middle .market table tr.active td.disable div button {
   background: #ebe4d5;
+  border-bottom: solid 1px #ffffff;
 }
 html body .center .middle .market table tr:hover td.disable div button i, html body .center .middle .market table tr:active td.disable div button i, html body .center .middle .market table tr.active td.disable div button i {
   color: #aa9c7f;
+}
+html body .center .middle .market table tr:hover td.disable div button:last-child, html body .center .middle .market table tr:active td.disable div button:last-child, html body .center .middle .market table tr.active td.disable div button:last-child {
+  border: none;
 }
 html body .center .middle .market table tr:hover td div button.disable, html body .center .middle .market table tr:active td div button.disable, html body .center .middle .market table tr.active td div button.disable {
   background: #ebe4d5;
@@ -2340,7 +2344,7 @@ html body .center .middle .market table tr td div button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: solid 1px #ececec;
+  border-bottom: solid 1px #dddddd;
 }
 html body .center .middle .market table tr td div button:hover, html body .center .middle .market table tr td div button:active, html body .center .middle .market table tr td div button.active {
   background: #3d87b3;
@@ -2394,9 +2398,6 @@ html body .center .middle .market table tr td div .innerBtn {
   font-weight: bold;
 }
 html body .center .middle .market table tr:nth-child(odd) {
-  background: #fafafa;
-}
-html body .center .middle .market table tr:nth-child(odd) button {
   background: #fafafa;
 }
 html body .center .middle .market ul {

@@ -22,7 +22,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            
+
             ol {
                 width: auto;
                 height: auto;
@@ -148,7 +148,7 @@
                             align-items: center;
                             justify-content: center;
                             margin-left: 10px;
-                            
+
                             span {
                                 color: $mainColor_1;
                                 font-size: 16px;
@@ -223,7 +223,7 @@
 
                         //選擇聯盟
                         &.chooseLeague {
-                         
+
                             span {
                                 color: $mainColor_2;
                                 font-size: 13px;
@@ -322,11 +322,14 @@
                             content: "直播";
                         }
 
-                        &:hover,&:active,&.active {
+                        &:hover,
+                        &:active,
+                        &.active {
                             background-position-y: 50%;
                         }
 
                         &:hover {
+
                             &::before,
                             &::after {
                                 display: block;
@@ -342,12 +345,14 @@
                             content: "動畫";
                         }
 
-                        &:hover,&:active,&.active {
+                        &:hover,
+                        &:active,
+                        &.active {
                             background-position-y: 100%;
                         }
 
                         &:hover {
-                            
+
                             &::before,
                             &::after {
                                 display: block;
@@ -374,7 +379,7 @@
             width: 100%;
             height: auto;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             padding: 20px 15px 0;
 
             li {
@@ -433,29 +438,31 @@
                 table {
 
                     tr {
-    
+
                         th {
 
                             &:nth-of-type(4),
                             &:nth-of-type(6) {
-    
+
                                 p {
                                     text-align: left;
                                 }
                             }
                         }
-    
+
                         td {
-    
+
                             &:nth-of-type(1) {
                                 width: 20%;
                             }
+
                             &:nth-of-type(2),
                             &:nth-of-type(3),
                             &:nth-of-type(5),
                             &:nth-of-type(7) {
                                 min-width: 72px;
                             }
+
                             &:nth-of-type(4),
                             &:nth-of-type(6) {
                                 width: 40%;
@@ -468,6 +475,7 @@
                     }
                 }
             }
+
             &.basketball {
 
                 table {
@@ -491,21 +499,23 @@
 
                             &:nth-of-type(1) {
                                 min-width: 100px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0;
                                 }
                             }
+
                             &:nth-of-type(2),
                             &:nth-of-type(3) {
                                 min-width: 80px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0;
                                 }
                             }
+
                             &:nth-of-type(4) {
                                 width: 100%;
 
@@ -514,6 +524,7 @@
                                     padding: 8px 20px;
                                 }
                             }
+
                             &:nth-of-type(5),
                             &:nth-of-type(6),
                             &:nth-of-type(7),
@@ -522,7 +533,7 @@
                             &:nth-of-type(10) {
                                 min-width: 60px;
                             }
-                            
+
                             p {
                                 height: 55px;
                             }
@@ -536,7 +547,7 @@
                 height: auto;
                 background: $mainBG_3;
                 position: relative;
-    
+
                 tr {
 
                     &:nth-of-type(2) {
@@ -558,14 +569,16 @@
                             }
                         }
                     }
-    
-                    &:hover,&:active,&.active {
-                                
+
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         td {
                             background: $table_hoverBG;
                         }
                     }
-    
+
                     th {
                         width: auto;
                         max-width: 0;
@@ -575,7 +588,7 @@
                         left: 0;
                         top: 0;
                         z-index: 1;
-                        
+
                         p {
                             width: 100%;
                             color: $mainColor_3;
@@ -585,33 +598,36 @@
                             padding: 8px 10px;
                         }
                     }
-    
+
                     td {
                         max-width: 0;
                         height: auto;
                         position: relative;
                         vertical-align: middle;
-    
+
                         &.unready {
-    
+
                             p {
                                 color: $center_table_Color_unReady;
                             }
                         }
+
                         &.finish {
-    
+
                             p {
                                 color: $center_table_Color_finish;
                             }
                         }
+
                         &.all {
-    
+
                             p {
                                 color: $center_table_Color_all;
                             }
                         }
+
                         &.half {
-    
+
                             p {
                                 color: $center_table_Color_half;
                             }
@@ -626,6 +642,7 @@
                                 }
                             }
                         }
+
                         &.over {
 
                             p {
@@ -642,7 +659,7 @@
                                 border-right: none;
                             }
                         }
-    
+
                         p {
                             width: 100%;
                             border: solid 1px $mainBorder_2;
@@ -660,14 +677,14 @@
                                 position: absolute;
                                 left: 50%;
                                 top: 50%;
-                                transform: translate(-50%,-50%);
+                                transform: translate(-50%, -50%);
 
                                 &.onTime {
                                     width: 5px;
                                     height: 5px;
                                     background: $otherColor_2;
                                     border-radius: 50%;
-    
+
                                     &::before {
                                         content: "";
                                         position: absolute;
@@ -679,13 +696,13 @@
                                         border-radius: 50%;
                                         animation: onTimeRipple 1s linear 0s infinite;
                                     }
-    
+
                                     @keyframes onTimeRipple {
                                         0% {
                                             opacity: 1;
                                             transform: scale(1);
                                         }
-    
+
                                         100% {
                                             opacity: 0;
                                             transform: scale(3);
@@ -697,7 +714,7 @@
                             span {
                                 display: block;
                                 @include textHidden;
-                                
+
                                 &:first-child {
                                     margin-bottom: 10px;
                                 }
@@ -723,16 +740,17 @@
                 table {
 
                     tr {
-    
+
                         th {
-    
+
                             &:nth-of-type(1) {
                                 width: 35%;
-    
+
                                 p {
                                     text-align: left;
                                 }
                             }
+
                             &:nth-of-type(2),
                             &:nth-of-type(3),
                             &:nth-of-type(4),
@@ -741,14 +759,15 @@
                                 width: 12%;
                                 min-width: 100px;
                             }
+
                             &:nth-of-type(7) {
                                 width: 5%;
                                 min-width: 55px;
                             }
                         }
-    
+
                         td {
-                            
+
                             &:nth-of-type(1) {
 
                                 div {
@@ -765,29 +784,31 @@
                 table {
 
                     tr {
-    
+
                         th {
-    
+
                             &:nth-of-type(1) {
                                 width: 35%;
-    
+
                                 p {
                                     text-align: left;
                                 }
                             }
+
                             &:nth-of-type(2),
                             &:nth-of-type(3) {
                                 width: 30%;
                                 min-width: 128px;
                             }
+
                             &:nth-of-type(4) {
                                 width: 5%;
                                 min-width: 60px;
                             }
                         }
-    
+
                         td {
-                            
+
                             &:nth-of-type(1) {
 
                                 div {
@@ -827,15 +848,16 @@
                     table {
 
                         tr {
-        
+
                             th {
-    
+
                                 &:nth-of-type(2),
                                 &:nth-of-type(3),
                                 &:nth-of-type(4) {
                                     width: 20%;
                                     min-width: 128px;
                                 }
+
                                 &:nth-of-type(5) {
                                     width: 5%;
                                     min-width: 60px;
@@ -846,7 +868,8 @@
                 }
             }
 
-            &.type_3 { //2023-08-01
+            &.type_3 {
+                //2023-08-01
                 margin-top: 5px;
 
                 table {
@@ -857,7 +880,7 @@
                         &.gameName {
 
                             th {
-                                padding:  8px;
+                                padding: 8px;
 
                                 &:not(:first-child) {
                                     min-width: 35px;
@@ -866,7 +889,7 @@
                                         text-align: center;
                                     }
                                 }
-                                
+
                                 p {
                                     text-align: start;
                                 }
@@ -890,7 +913,7 @@
                                 min-width: 60px;
 
                                 div {
-                                    
+
                                     span {
                                         font-size: 14px;
                                         color: $mainColor_1;
@@ -927,7 +950,7 @@
                             &:nth-of-type(14),
                             &:nth-of-type(15),
                             &:nth-of-type(16),
-                            &:nth-of-type(17){
+                            &:nth-of-type(17) {
                                 width: 2%;
                             }
 
@@ -958,7 +981,7 @@
                         }
 
                         &:last-child {
-                            
+
                             td {
                                 border-bottom: 0;
                             }
@@ -996,6 +1019,7 @@
                         &:first-child {
                             cursor: pointer;
                         }
+
                         &:not(:first-child) {
                             display: none;
                         }
@@ -1008,7 +1032,7 @@
                 height: auto;
                 background: $mainBG_3;
                 position: relative;
-    
+
                 tr {
 
                     &:nth-of-type(2) {
@@ -1020,9 +1044,11 @@
                             }
                         }
                     }
-    
-                    &:hover,&:active,&.active {
-                                
+
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         td {
                             background: $table_hoverBG;
 
@@ -1035,6 +1061,12 @@
 
                                         i {
                                             color: $tableBtn_disableColor_Active;
+                                        }
+
+                                        border-bottom: solid 1px $mainBorder_3;
+
+                                        &:last-child {
+                                            border: none;
                                         }
                                     }
                                 }
@@ -1055,7 +1087,7 @@
                             }
                         }
                     }
-    
+
                     th {
                         width: auto;
                         max-width: 0;
@@ -1066,7 +1098,7 @@
                         top: 0;
                         padding: 8px 10px;
                         z-index: 1;
-                        
+
                         p {
                             width: 100%;
                             color: $mainColor_3;
@@ -1084,7 +1116,7 @@
                             }
                         }
                     }
-    
+
                     td {
                         max-width: 0;
                         height: auto;
@@ -1130,7 +1162,9 @@
                         div {
                             width: 100%;
                             height: 95px;
-                            border: solid 1px $mainBorder_2;
+                            // border: solid 1px $mainBorder_2;
+                            border: solid 1px $mainBorder_5;
+
                             border-width: 1px 1px 0 0;
                             display: flex;
                             flex-direction: column;
@@ -1159,7 +1193,8 @@
                                 width: 100%;
                                 height: 100%;
                                 @include tableBtnStyle_1;
-                                border-bottom: solid 1px $mainBorder_2;
+                                // border-bottom: solid 1px $mainBorder_2;
+                                border-bottom: solid 1px $mainBorder_4;
 
                                 &.disable {
                                     background: $tableBtn_disableBG;
@@ -1175,7 +1210,9 @@
                                     border: none;
                                 }
 
-                                &:hover,&:active,&.active {
+                                &:hover,
+                                &:active,
+                                &.active {
 
                                     span {
                                         color: $mainColor_2;
@@ -1183,7 +1220,7 @@
                                 }
 
                                 &.mixStyle {
-                                    
+
                                     &.active {
                                         background: $mixpass_ActiveBG;
                                         color: $mainColor_2;
@@ -1203,7 +1240,7 @@
                                     position: absolute;
                                     left: 50%;
                                     top: 50%;
-                                    transform: translate(-50%,-50%);
+                                    transform: translate(-50%, -50%);
                                     color: $tableBtn_disableColor;
                                     font-size: 12px;
                                 }
@@ -1214,7 +1251,9 @@
                                 height: 20px;
                                 margin-bottom: 10px;
 
-                                &:hover,&:active,&.active {
+                                &:hover,
+                                &:active,
+                                &.active {
                                     background-position-x: 100%;
                                 }
                             }
@@ -1229,10 +1268,8 @@
 
                     &:nth-child(odd) {
                         background: $mainBG_4;
-                        
-                        button {
-                            background: $mainBG_4; 
-                        }
+
+                    
                     }
                 }
             }
@@ -1278,6 +1315,7 @@
                             &.soccer {
                                 background: $center_onTimeBG_soccer;
                             }
+
                             &.basketball {
                                 background: $center_onTimeBG_basketball;
                             }
@@ -1322,7 +1360,7 @@
                             }
                         }
 
-                         td {
+                        td {
 
                             &:nth-of-type(1) {
                                 width: 20%;
@@ -1345,7 +1383,7 @@
                             &:nth-of-type(3),
                             &:nth-of-type(6) {
                                 min-width: 70px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
@@ -1366,6 +1404,7 @@
                                     }
                                 }
                             }
+
                             &:nth-of-type(4),
                             &:nth-of-type(7) {
                                 width: 40%;
@@ -1376,6 +1415,7 @@
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(9) {
                                 min-width: 60px;
                             }
@@ -1383,6 +1423,7 @@
                     }
                 }
             }
+
             &.basketball {
 
                 table {
@@ -1404,6 +1445,7 @@
                             &:nth-of-type(1) {
                                 min-width: 110px;
                             }
+
                             &:nth-of-type(2) {
                                 min-width: 70px;
 
@@ -1412,14 +1454,16 @@
                                     padding: 0;
                                 }
                             }
+
                             &:nth-of-type(3) {
                                 min-width: 85px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0;
                                 }
                             }
+
                             &:nth-of-type(4) {
                                 width: 100%;
 
@@ -1430,6 +1474,7 @@
                                     }
                                 }
                             }
+
                             &:nth-of-type(5),
                             &:nth-of-type(6),
                             &:nth-of-type(7),
@@ -1438,6 +1483,7 @@
                             &:nth-of-type(10) {
                                 min-width: 50px;
                             }
+
                             &:nth-of-type(11) {
                                 min-width: 60px;
                             }
@@ -1451,16 +1497,18 @@
                 height: auto;
                 background: $mainBG_3;
                 position: relative;
-    
+
                 tr {
-    
-                    &:hover,&:active,&.active {
-                                
+
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         td {
                             background: $table_hoverBG;
                         }
                     }
-    
+
                     &:first-child {
 
                         th {
@@ -1470,6 +1518,7 @@
                             }
                         }
                     }
+
                     &:nth-of-type(2) {
 
                         th {
@@ -1481,7 +1530,7 @@
                             }
                         }
                     }
-    
+
                     th {
                         width: auto;
                         max-width: 0;
@@ -1498,7 +1547,7 @@
                                 border: none;
                             }
                         }
-                        
+
                         p {
                             width: 100%;
                             color: $mainColor_3;
@@ -1509,7 +1558,7 @@
                             padding: 8px 10px;
                         }
                     }
-    
+
                     td {
                         max-width: 0;
                         height: auto;
@@ -1532,7 +1581,7 @@
                                 border-right: none;
                             }
                         }
-    
+
                         p {
                             width: 100%;
                             height: 55px;
@@ -1582,7 +1631,7 @@
                                 display: block;
                                 width: auto;
                                 @include textHidden;
-                                
+
                                 &:first-child {
                                     margin-bottom: 10px;
                                 }
@@ -1596,6 +1645,7 @@
                                     &.redCard {
                                         background: $score_cardIcon_redBG;
                                     }
+
                                     &.yellowCard {
                                         background: $score_cardIcon_yellowBG;
                                     }
@@ -1607,7 +1657,9 @@
                                 height: 20px;
                                 margin: 0 auto;
 
-                                &:hover,&:active,&.active {
+                                &:hover,
+                                &:active,
+                                &.active {
                                     background-position-x: 100%;
                                 }
                             }
@@ -1647,12 +1699,13 @@
 
                             &:nth-of-type(1) {
                                 width: 10%;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(2) {
                                 width: 15%;
 
@@ -1661,6 +1714,7 @@
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(3) {
                                 width: 45%;
 
@@ -1671,6 +1725,7 @@
                                     }
                                 }
                             }
+
                             &:nth-of-type(4),
                             &:nth-of-type(5) {
                                 width: 15%;
@@ -1710,12 +1765,13 @@
 
                             &:nth-of-type(1) {
                                 width: 10%;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(2) {
                                 width: 20%;
 
@@ -1724,6 +1780,7 @@
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(3) {
                                 width: 50%;
 
@@ -1734,6 +1791,7 @@
                                     }
                                 }
                             }
+
                             &:nth-of-type(4) {
                                 width: 20%;
                             }
@@ -1741,7 +1799,7 @@
                     }
                 }
             }
-            
+
             &.baseball {
 
                 table {
@@ -1762,12 +1820,13 @@
 
                             &:nth-of-type(1) {
                                 min-width: 70px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(2) {
                                 width: 20%;
 
@@ -1776,6 +1835,7 @@
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(3) {
                                 width: 80%;
 
@@ -1786,6 +1846,7 @@
                                     }
                                 }
                             }
+
                             &:nth-of-type(4),
                             &:nth-of-type(5),
                             &:nth-of-type(6),
@@ -1798,6 +1859,7 @@
                             &:nth-of-type(13) {
                                 min-width: 40px;
                             }
+
                             &:nth-of-type(14) {
                                 min-width: 60px;
                             }
@@ -1806,7 +1868,7 @@
                 }
             }
 
-            &.horse{
+            &.horse {
 
                 table {
 
@@ -1815,7 +1877,7 @@
                         &:first-child {
 
                             th {
-                                
+
                                 p {
                                     padding: 8px 10px;
                                 }
@@ -1823,7 +1885,7 @@
                         }
 
                         th {
-                            
+
                             p {
                                 padding: 8px 0;
                             }
@@ -1834,12 +1896,13 @@
                             &:nth-of-type(1),
                             &:nth-of-type(2) {
                                 min-width: 70px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(3) {
                                 min-width: 80px;
 
@@ -1848,6 +1911,7 @@
                                     padding: 0 10px;
                                 }
                             }
+
                             &:nth-of-type(4),
                             &:nth-of-type(5),
                             &:nth-of-type(6),
@@ -1868,16 +1932,16 @@
             }
 
             &.stock {
-                
+
                 table {
 
                     tr {
-                        
+
                         td {
                             width: 25%;
 
                             &:not(:first-child) {
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
@@ -1902,7 +1966,7 @@
 
                             &:nth-of-type(2) {
                                 min-width: 120px;
-                                
+
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
@@ -1921,37 +1985,38 @@
                             &:nth-of-type(8),
                             &:nth-of-type(9) {
                                 width: 12%;
+
                                 p {
                                     padding: 8px 0;
                                 }
                             }
 
-                           &:last-child {
+                            &:last-child {
                                 width: 28%;
 
                                 p {
                                     line-height: 55px;
                                     padding: 0 10px;
                                 }
-                           }
+                            }
                         }
                     }
-                    
+
                     &.hk {
-                       
+
                         tr {
-        
+
                             td {
 
                                 &:nth-of-type(3) {
                                     min-width: unset;
                                     width: 9%;
-                                } 
+                                }
 
-                                &:nth-of-type(4), 
-                                &:nth-of-type(5), 
-                                &:nth-of-type(6), 
-                                &:nth-of-type(7), 
+                                &:nth-of-type(4),
+                                &:nth-of-type(5),
+                                &:nth-of-type(6),
+                                &:nth-of-type(7),
                                 &:nth-of-type(8) {
                                     width: 9%;
                                 }
@@ -1960,25 +2025,26 @@
                                 &:nth-of-type(10),
                                 &:nth-of-type(11) {
                                     width: 9%;
+
                                     p {
                                         line-height: 55px;
                                         padding: 0px 10px;
-                                    } 
-                                    
+                                    }
+
                                 }
                             }
-                            
+
                         }
                     }
                 }
             }
 
             &.hockey {
-                
+
                 table {
 
                     tr {
-                        
+
                         td {
                             width: 25%;
 
@@ -1988,7 +2054,7 @@
                                 p {
                                     line-height: 55px;
                                     padding: 0px 10px;
-                                } 
+                                }
                             }
 
                             &:nth-of-type(2) {
@@ -2004,16 +2070,18 @@
                 height: auto;
                 background: $mainBG_3;
                 position: relative;
-    
+
                 tr {
-    
-                    &:hover,&:active,&.active {
-                                
+
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         td {
                             background: $table_hoverBG;
                         }
                     }
-    
+
                     &:first-child {
 
                         th {
@@ -2024,6 +2092,7 @@
                                     text-align: left;
                                 }
                             }
+
                             &:last-child {
 
                                 p {
@@ -2032,6 +2101,7 @@
                             }
                         }
                     }
+
                     &:nth-of-type(2) {
 
                         th {
@@ -2039,7 +2109,7 @@
                             top: 29px;
 
                             &:last-child {
-                                
+
                                 p {
                                     border: none;
                                 }
@@ -2051,7 +2121,7 @@
                             }
                         }
                     }
-    
+
                     th {
                         width: auto;
                         max-width: 0;
@@ -2061,7 +2131,7 @@
                         left: 0;
                         top: 0;
                         z-index: 1;
-                        
+
                         p {
                             width: 100%;
                             color: $mainColor_3;
@@ -2071,7 +2141,7 @@
                             padding: 8px 10px;
                         }
                     }
-    
+
                     td {
                         max-width: 0;
                         height: auto;
@@ -2083,7 +2153,7 @@
                                 border-right: none;
                             }
                         }
-    
+
                         p {
                             width: 100%;
                             height: 55px;
@@ -2100,7 +2170,7 @@
                                 display: block;
                                 width: auto;
                                 @include textHidden;
-                                
+
                                 &:first-child {
                                     margin-bottom: 10px;
                                 }
@@ -2116,7 +2186,7 @@
             display: none;
             width: 100%;
             height: auto;
-            
+
             &.display {
                 display: block;
             }
@@ -2126,20 +2196,22 @@
                 table {
 
                     tr {
-    
+
                         th {
-    
+
                             &:nth-of-type(1) {
                                 width: 35%;
                                 padding-left: 25px;
-                                
+
                                 p {
                                     text-align: left;
                                 }
                             }
+
                             &:nth-of-type(2) {
                                 width: 5%;
                             }
+
                             &:nth-of-type(3),
                             &:nth-of-type(4),
                             &:nth-of-type(5),
@@ -2148,9 +2220,9 @@
                                 width: 12%;
                             }
                         }
-    
+
                         td {
-                            
+
                             &:nth-of-type(1) {
 
                                 div {
@@ -2172,13 +2244,14 @@
                 border: 2px solid $mainColor_3;
                 margin-bottom: 10px;
 
-                &:hover,&:active {
+                &:hover,
+                &:active {
                     border-color: $mainBorder_3;
                 }
             }
 
-             //動畫直播
-             .animateShow {
+            //動畫直播
+            .animateShow {
                 width: 100%;
                 height: 510px;
                 display: flex;
@@ -2225,7 +2298,9 @@
                             left: 0;
                         }
 
-                        &:hover,&:active,&.active {
+                        &:hover,
+                        &:active,
+                        &.active {
                             background: transparent;
                             border: none;
 
@@ -2276,11 +2351,13 @@
                 height: auto;
                 background: $mainBG_3;
                 position: relative;
-    
+
                 tr {
-    
-                    &:hover,&:active,&.active {
-                                
+
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         td {
                             background: $table_hoverBG;
 
@@ -2313,7 +2390,7 @@
                             }
                         }
                     }
-    
+
                     th {
                         width: auto;
                         max-width: 0;
@@ -2321,7 +2398,7 @@
                         background: $subBG_1;
                         padding: 12px 10px;
                         z-index: 1;
-                        
+
                         p {
                             width: 100%;
                             color: $mainColor_3;
@@ -2330,7 +2407,7 @@
                             @include textHidden;
                         }
                     }
-    
+
                     td {
                         max-width: 0;
                         height: auto;
@@ -2426,7 +2503,9 @@
                                     border: none;
                                 }
 
-                                &:hover,&:active,&.active {
+                                &:hover,
+                                &:active,
+                                &.active {
 
                                     span {
                                         color: $mainColor_2;
@@ -2442,7 +2521,7 @@
                                     position: absolute;
                                     left: 50%;
                                     top: 50%;
-                                    transform: translate(-50%,-50%);
+                                    transform: translate(-50%, -50%);
                                     color: $tableBtn_disableColor;
                                     font-size: 12px;
                                 }
@@ -2520,7 +2599,7 @@
         }
 
         @media only screen and (max-width: 1360px) {
-            
+
             .market {
 
                 &.type_1 {
@@ -2538,6 +2617,7 @@
                                 &:nth-of-type(6) {
                                     min-width: 80px;
                                 }
+
                                 &:nth-of-type(7) {
                                     min-width: 55px;
                                 }
@@ -2685,12 +2765,12 @@
 
                             &:nth-of-type(1) {
                                 width: 10%;
-                                
+
                                 p {
                                     color: $mainColor_3;
                                     font-size: 12px;
                                     font-weight: bold;
-                                    text-align: center; 
+                                    text-align: center;
 
                                     span {
                                         margin-left: 5px;
@@ -2733,7 +2813,7 @@
                                         font-size: 12px;
                                         font-weight: bold;
                                     }
-                                 
+
                                     span {
                                         color: $otherColor_3;
                                         font-size: 12px;
@@ -2817,7 +2897,7 @@
 
                         &:nth-of-type(2) {
                             display: grid;
-                            grid-template-columns: repeat(3,1fr);
+                            grid-template-columns: repeat(3, 1fr);
                             gap: 5px;
                             padding-left: 5px;
 
@@ -2839,14 +2919,14 @@
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            
+
                             &:not(:first-child) {
                                 margin-top: 5px;
 
                                 input {
                                     color: $otherColor_1;
                                 }
-                                
+
                             }
 
                             p {
@@ -2860,7 +2940,9 @@
                                 @include inputStyle_1;
                                 border: solid 1px transparent;
 
-                                &:hover,&:active,&.active {
+                                &:hover,
+                                &:active,
+                                &.active {
                                     border-color: $inputStyle_1_otherBorder;
                                 }
                             }
@@ -2872,7 +2954,7 @@
     }
 
     @media only screen and (max-width: 1260px) {
-        
+
         .topfix {
 
             ul {
@@ -2949,19 +3031,19 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-    
-                    p { 
-    
+
+                    p {
+
                         &:first-child {
                             margin-bottom: 20px;
-                            
+
                             span {
                                 margin: 0 20px;
                             }
                         }
                     }
                 }
-    
+
                 p {
                     color: $mainColor_2;
                     font-size: 16px;
@@ -2986,7 +3068,9 @@
                 padding: 0 5px 2px;
                 margin-right: 20px;
 
-                &:hover,&:active,&.active {
+                &:hover,
+                &:active,
+                &.active {
 
                     i {
                         border-color: transparent $mainColor_2;
@@ -3016,7 +3100,9 @@
                     position: relative;
                     cursor: pointer;
 
-                    &:hover,&:active,&.active {
+                    &:hover,
+                    &:active,
+                    &.active {
                         border-color: $mainBorder_3;
                     }
 
@@ -3057,21 +3143,24 @@
                     display: grid;
                     align-items: center;
 
-                    &:hover,&:active,&.active {
-                        
+                    &:hover,
+                    &:active,
+                    &.active {
+
                         button {
                             background: $table_hoverBG;
                         }
                     }
 
                     &.three {
-                        grid-template-columns: repeat(3,1fr);
-                    }
-                    &.four {
-                        grid-template-columns: repeat(4,1fr);
+                        grid-template-columns: repeat(3, 1fr);
                     }
 
-                    &.title { 
+                    &.four {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+
+                    &.title {
                         height: 28px;
                         background: $subBG_1;
                         padding: 0 10px;
@@ -3093,7 +3182,9 @@
                             border: none;
                         }
 
-                        &:hover,&:active,&.active {
+                        &:hover,
+                        &:active,
+                        &.active {
 
                             span {
                                 color: $mainColor_2;
@@ -3119,7 +3210,7 @@
         }
 
         @media only screen and (max-width: 1280px) {
-            
+
             .topfix {
 
                 ul {
