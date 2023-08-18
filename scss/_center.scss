@@ -1052,6 +1052,25 @@
 
                 tr {
 
+                    // 20230818 j add
+                    &:nth-child(odd) {
+                        background: $mainBG_7;
+
+                        button {
+                            background: $mainBG_8;
+                        }
+
+                        td {
+                            &.disable {
+                                div {
+                                    button {
+                                        background: #1b2028;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     &:hover,
                     &:active,
                     &.active {
@@ -1124,6 +1143,7 @@
                                     background: $tableBtn_disableBG;
                                     position: relative;
                                     pointer-events: none;
+
                                     i {
                                         display: block;
                                     }
@@ -1239,15 +1259,6 @@
                                 font-size: 12px;
                                 font-weight: bold;
                             }
-                        }
-                    }
-
-                    // 20230818 j add
-                    &:nth-child(odd) {
-                        background: $mainBG_7;
-
-                        button {
-                            background: $mainBG_8
                         }
                     }
                 }

@@ -1044,7 +1044,19 @@
                             }
                         }
                     }
+                    &:nth-child(odd) {
+                        background: $mainBG_4;
 
+                        td {
+                            &.disable {
+                                div {
+                                    button {
+                                        background: $mainBG_5;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     &:hover,
                     &:active,
                     &.active {
@@ -1264,12 +1276,6 @@
                                 font-weight: bold;
                             }
                         }
-                    }
-
-                    &:nth-child(odd) {
-                        background: $mainBG_4;
-
-                    
                     }
                 }
             }

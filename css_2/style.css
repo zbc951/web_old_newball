@@ -2214,6 +2214,12 @@ html body .center .middle .market table {
 html body .center .middle .market table tr:nth-of-type(2) td div {
   border-top-width: 0;
 }
+html body .center .middle .market table tr:nth-child(odd) {
+  background: #fafafa;
+}
+html body .center .middle .market table tr:nth-child(odd) td.disable div button {
+  background: #f0f0f0;
+}
 html body .center .middle .market table tr:hover td, html body .center .middle .market table tr:active td, html body .center .middle .market table tr.active td {
   background: #fff5e1;
 }
@@ -2277,7 +2283,7 @@ html body .center .middle .market table tr td.small div button span {
   margin-right: 10px;
 }
 html body .center .middle .market table tr td.disable div button {
-  background: #f0f0f0;
+  background: #fafafa;
   position: relative;
   pointer-events: none;
 }
@@ -2351,7 +2357,7 @@ html body .center .middle .market table tr td div button:hover, html body .cente
   color: #ffffff;
 }
 html body .center .middle .market table tr td div button.disable {
-  background: #f0f0f0;
+  background: #fafafa;
   position: relative;
   pointer-events: none;
 }
@@ -2396,9 +2402,6 @@ html body .center .middle .market table tr td div .innerBtn {
   color: #28b208;
   font-size: 12px;
   font-weight: bold;
-}
-html body .center .middle .market table tr:nth-child(odd) {
-  background: #fafafa;
 }
 html body .center .middle .market ul {
   width: 100%;
@@ -3101,7 +3104,7 @@ html body .center .middle .liveStream table tr td.small div button span {
   display: none;
 }
 html body .center .middle .liveStream table tr td.disable div button {
-  background: #f0f0f0;
+  background: #fafafa;
   position: relative;
   pointer-events: none;
 }
@@ -3176,7 +3179,7 @@ html body .center .middle .liveStream table tr td div button:hover, html body .c
   color: #ffffff;
 }
 html body .center .middle .liveStream table tr td div button.disable {
-  background: #f0f0f0;
+  background: #fafafa;
   position: relative;
   pointer-events: none;
 }
