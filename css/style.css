@@ -265,17 +265,23 @@ html body header .top .endBox i:nth-of-type(2) {
           transform: scaleX(-1);
   padding: 4px 5.5px;
 }
-html body header .top .endBox i:hover, html body header .top .endBox i:active, html body header .top .endBox i.active {
+html body header .top .endBox i:hover, html body header .top .endBox i:active {
   color: #ff7200;
 }
-html body header .top .endBox i:hover::after, html body header .top .endBox i:active::after, html body header .top .endBox i.active::after {
+html body header .top .endBox i:hover::after, html body header .top .endBox i:active::after {
   background: #ffffff;
 }
-html body header .top .endBox i:hover:nth-of-type(2), html body header .top .endBox i:active:nth-of-type(2), html body header .top .endBox i.active:nth-of-type(2) {
+html body header .top .endBox i:hover:nth-of-type(2), html body header .top .endBox i:active:nth-of-type(2) {
   color: #feb300;
 }
-html body header .top .endBox i:hover:nth-of-type(2)::after, html body header .top .endBox i:active:nth-of-type(2)::after, html body header .top .endBox i.active:nth-of-type(2)::after {
+html body header .top .endBox i:hover:nth-of-type(2)::after, html body header .top .endBox i:active:nth-of-type(2)::after {
   background: #19202a;
+}
+html body header .top .endBox i.active:nth-of-type(2) {
+  color: #ff7200;
+}
+html body header .top .endBox i.active:nth-of-type(2)::after {
+  background: #ffffff;
 }
 html body header .top .endBox i::after {
   content: "";
